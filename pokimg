@@ -34,7 +34,7 @@ _help(){
 
 _random_pokemon(){
   OUTPUT=$(python3 $ABSOLUTE_PATH/random_pokemon.py $@)
-  echo $OUTPUT
+  #echo $OUTPUT
   echo " "
   set -- $OUTPUT
   POKEMON=$1
@@ -45,7 +45,7 @@ _print_pokemon(){
   case $TERMINAL in
 
     kitty)
-      kitten icat --align left --silent $ABSOLUTE_PATH/images/$POKEMON.png
+      kitty +kitten icat --align left --silent $ABSOLUTE_PATH/images/$POKEMON.png
       ;;
 
     iTerm2)
